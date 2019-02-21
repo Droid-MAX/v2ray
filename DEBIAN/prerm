@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Shutting down V2Ray service."
+if [[ -f "/lib/systemd/system/v2ray.service" ]] || [[ -f "/etc/systemd/system/v2ray.service" ]]; then
+    systemctl stop v2ray
+    systemctl disable v2ray.service
+elif [[ -f "/etc/init.d/v2ray" ]]; then
+    service v2ray stop
+    update-rc.d -f v2ray remove
+fi

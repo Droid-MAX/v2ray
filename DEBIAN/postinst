@@ -1,0 +1,10 @@
+#!/bin/bash
+systemctl daemon-reload
+echo "Enabling V2Ray service."
+if [[ -f "/lib/systemd/system/v2ray.service" ]]; then
+    systemctl enable v2ray.service
+fi
+if [[ -f "/etc/init.d/v2ray" ]]; then
+    update-rc.d v2ray defaults
+fi
+echo "Now, You can type 'service v2ray start' or 'systemctl start v2ray' to start v2ray service."

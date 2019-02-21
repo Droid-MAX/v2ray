@@ -1,0 +1,3 @@
+#!/bin/bash
+systemctl daemon-reload
+rm -rf /var/log/v2ray

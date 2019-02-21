@@ -1,0 +1,8 @@
+Package: v2ray
+Version: 4.16.3
+Depends: daemon
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Project V <admin@v2ray.com>
+Description: A platform for building proxies to bypass network restrictions.
