@@ -7,4 +7,5 @@ fi
 if [[ -f "/etc/init.d/v2ray" ]]; then
     update-rc.d v2ray defaults
 fi
+sed -i "s/23ad6b10-8d1a-40f7-8ad0-e3e35cd38297/$(cat /proc/sys/kernel/random/uuid)/g" "/etc/v2ray/config.json"
 echo "Now, You can type 'service v2ray start' or 'systemctl start v2ray' to start v2ray service."
